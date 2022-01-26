@@ -4,16 +4,52 @@ function nuevaFuncion(name, age, country) {
   var country = country || "Colombia";
   console.log(name, age, country);
 }
-//es6
+//es6 Forma mucho mas facil de realizar Funciones
 function nuevaFuncion2(name = "Alejandro", age = 16, country = "Colombia") {
   console.log(name, age, country);
 }
 
 nuevaFuncion2();
-nuevaFuncion2("Luis", "15", "Panama"); 
-
-let hello = "Hola"; 
-let World = "Mundo"; 
-let FraseEpica = hello + " " + World + ":D"; 
+nuevaFuncion2("Luis", "15", "Panama");
+//
+let hello = "Hola";
+let World = "Mundo";
+let FraseEpica = hello + " " + World + ":D";
+//es6 Forma mas Epica y sencilla de hacer una concatenacion 
 let FraseEpica2 = `${hello} ${World}`;
-console.log(FraseEpica2)
+console.log(FraseEpica2);
+
+let lorem =
+  "La frase mas epica de toda la historia de Js\n" + "Frase menos epica Kekw";
+//es 6 Forma mucho mas facil de saltar parrafos
+let lorem2 = `Frase ultramente epica actualizada equis de
+ahora es otra frase mas epica que la anterior`;
+console.log(lorem2);
+//
+let persona = {
+  nombre: "Alejandro",
+  Age: 16,
+  country: "Colombia",
+};
+//Es 6 Forma mas facil para llamar objetos
+let {nombre, Age, country } = persona;
+console.log(nombre, Age, country);
+//
+let team1 = ["Alejandro", "Diaz", "Granuja", "Metricas"];
+let team2 = ["CMR", "Noise", "Pedro", "Julian"];
+
+let education = ["Sanchez", ...team1, ...team2];
+console.log(education);
+//Var es una variable global(se puede reasignar una variable Var)
+{
+  var globalVar = "global var";
+}
+//let permite declarar variables limitando su alcance al bloque, declaración, o expresión
+{
+  let global = "Global let";
+  console.log(global)
+} 
+console.log(globalVar); 
+//Const Nunca permitira que una variable sea reasignada
+const a = "b"; 
+a = "a"; 
