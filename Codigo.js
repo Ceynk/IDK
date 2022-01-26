@@ -101,4 +101,18 @@ const helloPromise = () => {
 helloPromise()
   .then(response => console.log(response))
   .then(() => console.log("Hola :D"))
-  .catch(error => console.log(error))
+  .catch(error => console.log(error));
+//
+class calculator {
+  constructor(){
+    this.ValueA = 0;
+    this.ValueB = 0;
+  }
+  sum(ValueA, ValueB){
+    this.ValueA = ValueA;
+    this.ValueB = ValueB; 
+    return this.ValueA + this.ValueB;
+  }
+} 
+const calc = new calculator(); 
+console.log(calc.sum(2, 4))
