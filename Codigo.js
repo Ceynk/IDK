@@ -53,3 +53,52 @@ console.log(globalVar);
 //Const Nunca permitira que una variable sea reasignada
 const a = "b"; 
 a = "a"; 
+
+// Objetos
+let name1 = "Alejandro";
+let age = 16; 
+//Forma de hacer objetos antes
+obj = {name: name1, age: age};
+//es6 Forma de hacer objetos ahora y mas facil
+obj2 = {name1, age}; 
+console.log(obj2)
+
+//Arrow
+const names = [
+  { name: 'Alejandro', age: 16 },
+  { name: 'Scarlett', age: 18 }
+]
+
+let listOfNames = names.map(function(item){
+  console.log(item.name);
+}) 
+//Arrow Fuction 
+let listOfNames2 = names.map(item => console.log(item.name));
+
+/*const listOfNames3 = (names, age) => {
+  ...age
+}
+
+const listOfNames4  = names =>{
+  ...
+}
+*/ 
+let numero1 = 45;
+let numero2 = 45; 
+const square = numero1 => numero1 + numero2;  
+console.log(square(numero1))
+
+//Promesas 
+const helloPromise = () => {
+  return new Promise((resolve, reject) => {
+    if (true){
+      resolve("Hey!")
+    } else{
+      reject("Ups perra!!")
+    }
+  });
+}
+helloPromise()
+  .then(response => console.log(response))
+  .then(() => console.log("Hola :D"))
+  .catch(error => console.log(error))
