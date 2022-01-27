@@ -33,7 +33,7 @@ let persona = {
 };
 //Es 6 Forma mas facil para llamar objetos
 let {nombre, Age, country } = persona;
-console.log(nombre, Age, country);
+console.log(nombre, Age);
 //
 let team1 = ["Alejandro", "Diaz", "Granuja", "Metricas"];
 let team2 = ["CMR", "Noise", "Pedro", "Julian"];
