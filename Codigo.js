@@ -8,13 +8,13 @@ let deudas = 85000;
 let total = dinero - deudas;
 
 function miPerfil(Perfil) {
-  return nombre + " " + apellido + " " + "Edad:" + `${edadMayor}`;
+  return `${nombre} ${apellido} Edad:${edadMayor}`;
 }
 
 function miCorreo(Correo) {
-  return "Correo: " + correo + "  " + "Nombre de Usuario:" + nombrePlazi;
+  return `Correo: ${correo} Alias: ${nombrePlazi}`;
 }
 
 function miDineroTotal(Dinero){
-    return "Dinero:" + dinero + " - "+ "Deudas:" + deudas + " " +"DineroTotal:" + total;
-}
+    return `Dinero:${dinero} - Deudas:${deudas}  DineroTotal:${total}`;
+} 
