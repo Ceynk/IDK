@@ -1,20 +1,18 @@
-let nombre = "Alejandro";
-let apellido = "Diaz";
-let nombrePlazi = "Ceynk";
-let correo = "diazluisalejandro25@gmail.com";
-let edadMayor = 18;
-let dinero = 100000;
-let deudas = 85000;
-let total = dinero - deudas;
-
-function miPerfil(Perfil) {
+function miPerfil(nombre = "Alejandro", apellido = "Diaz", edadMayor = 18) {
   return `${nombre} ${apellido} Edad:${edadMayor}`;
 }
 
-function miCorreo(Correo) {
-  return `Correo: ${correo} Alias: ${nombrePlazi}`;
+function miCorreo(
+  correo = "diazluisalejandro25@gmail.com",
+  nombrePlazi = "Ceynk"
+) {
+  return `Correo:${correo} Alias: ${nombrePlazi}`;
 }
 
-function miDineroTotal(Dinero){
-    return `Dinero:${dinero} - Deudas:${deudas}  DineroTotal:${total}`;
-} 
+function miDineroTotal(
+  dinero = 100000,
+  deudas = 85000,
+  total = dinero - deudas
+) {
+  return `Dinero:${dinero} - Deudas:${deudas}  DineroTotal:${total}`;
+}
