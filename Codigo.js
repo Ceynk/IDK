@@ -140,3 +140,11 @@ const string = "hello";
 console.log(string.padStart(7,"hi "))
 console.log(string.padEnd(12, "------")) 
 console.log("food".padEnd(12,"------")) 
+//
+const helloWorld = () => {
+  return new Promise((resolve,reject) => {
+   (true) 
+    ? setTimeout(() => ("Hello World"), 3000)
+    : reject(new Error("Error test"))
+  })
+}
