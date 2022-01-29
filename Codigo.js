@@ -28,7 +28,7 @@ const tipoDeSuscripcion = "Basic";
     console.log("Pobre no tiene plazi")
   } 
  
-  //
+//
 
 i = 14;
 while (i >= 2) {
@@ -42,4 +42,18 @@ a = prompt("Cuanto es 2 + 2 ")
  }
  else{
    alert("eres realmente estupido")
- }
+ } 
+ //  
+ let lista = ["Como","Andamos","Gente"];
+  console.log(lista)
+  // 
+  const objetoPc = {
+    placaBase: "B450m",
+    tarjetaGrafica:"RTX 2060",
+    procesador:"R5 3600"
+  } 
+  
+  for (const property in objetoPc) {
+      console.log(`${property}: ${objetoPc[property]}`);
+    }
+  
