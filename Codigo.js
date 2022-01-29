@@ -115,4 +115,28 @@ class calculator {
   }
 } 
 const calc = new calculator(); 
-console.log(calc.sum(2, 4));
+console.log(calc.sum(2, 4)); 
+
+//
+const data = {
+  frontend: "Alejandro",
+  Backend: "Luis",
+  desing: "Pablo"
+} 
+
+const entries = Object.entries(data); 
+console.log(entries.length) 
+// 
+
+const data1 = {
+  frontend: "Alejandro",
+  Backend: "Luis",
+  desing: "Pablo",
+} 
+const values = Object.values(data1); 
+console.log(values) 
+// 
+const string = "hello";
+console.log(string.padStart(7,"hi "))
+console.log(string.padEnd(12, "------")) 
+console.log("food".padEnd(12,"------")) 
