@@ -1,6 +1,8 @@
-function miPerfil(nombre = "Alejandro", apellido = "Diaz", edadMayor = 18) {
+function miPerfil({nombre = "Alejandro", apellido, edadMayor = 16}) {
   return `${nombre} ${apellido} Edad:${edadMayor}`;
 }
+console.log(miPerfil({apellido:"Diaz"}))
+
 
 function miCorreo(correo = "diazluisalejandro25@gmail.com", nombrePlazi = "Ceynk") {
   return `Correo:${correo} Alias: ${nombrePlazi}`;
@@ -10,7 +12,7 @@ function miDineroTotal(dinero = 100000, deudas = 85000, total = dinero - deudas)
   return `Dinero:${dinero} - Deudas:${deudas}  DineroTotal:${total}`;
 } 
 
-const tipoDeSuscripcion = "Basic";
+const tipoDeSuscripcion = "Expert";
   
   if(tipoDeSuscripcion == "Gratis"){
     console.log("Solo puedes tomar los cursos gratis")
@@ -56,4 +58,15 @@ a = prompt("Cuanto es 2 + 2 ")
   for (const property in objetoPc) {
       console.log(`${property}: ${objetoPc[property]}`);
     }
+  // 
+  
+  function miArray(array ){
+    console.log(array.length) 
+    let i = array.length;
+    while (i >= 1) {
+      console.log(`El valor del array es ${array[i - 1]}`)
+      i--;
+     }
+  }
+  miArray(["Luis", "Alejandro", "Diaz"])  
   
