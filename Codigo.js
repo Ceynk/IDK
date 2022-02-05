@@ -147,4 +147,18 @@ const helloWorld = () => {
     ? setTimeout(() => ("Hello World"), 3000)
     : reject(new Error("Error test"))
   })
-}
+} 
+//Como Agrupar los Console.log 
+console.group('Triangulos')
+
+const ladoTriangulo1 = 6;
+const ladoTriangulo2 = 6;
+const baseTriangulo = 4;
+console.log(
+  `los lados del triangulo miden: 
+  ${ladoTriangulo1}cm 
+  ${ladoTriangulo2}cm
+  ${baseTriangulo}cm `
+  ); 
+  
+  console.groupEnd
