@@ -3,4 +3,13 @@ body {
 }
 h1{
   color: aquamarine;
+}  
+#Texto{
+border-color: red;
+} 
+#BotonCuadrado{
+  color: red;
+} 
+#Boton2{
+  color: blue;
 }
