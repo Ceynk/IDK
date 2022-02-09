@@ -1,17 +1,11 @@
-//Codgio del Cuadrado
 console.group("Cuadrado");
-//const ladoCuadrado = prompt("Lados");
-//console.log(`Los Lados del cuadrado miden: ${ladoCuadrado}cm`);
-
 function perimetroCuadrado(lado) {
   return lado * 4;
 }
-
 function areaCuadrado(lado) {
   return lado * lado;
 }
 console.groupEnd();
-
 //Codigo del Triangulo
 console.group("Triangulo");
 function perimetroTriangulo(lado1, lado2, base) {
@@ -39,7 +33,6 @@ function areaCirculo(radio) {
   return (radio * radio) * PI;
 }
 console.groupEnd(); 
-
 //Utilizamos HTML 
 function calcularPerimetroCuadrado() {
   const input = document.getElementById("InputCuadrado");
