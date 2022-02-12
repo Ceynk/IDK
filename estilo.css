@@ -1,15 +1,12 @@
 body {
   font-family: Helvetica;
+  background-color: rgba(220, 220, 220, 0.842);
 }
 h1{
-  color: aquamarine;
+  color: rgb(0, 0, 0);
 }  
-#Texto{
-border-color: red;
-} 
-#BotonCuadrado{
-  color: red;
-} 
-#Boton2{
-  color: blue;
+#precio{
+  font-size: 15px;
+  background-color: rgba(220, 220, 220, 0.842);;
+  border-color: red;
 }
