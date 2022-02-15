@@ -1,7 +1,11 @@
-function calculaPorcentaje(precio, descuento = 40) {
-  const calcular = precio*(descuento/100);
-  alert(`Total a pagar ${calcular}$`);
-} 
+function calculaPorcentaje(precio) {
+  const input1 = document.getElementById("Porcentaje1")
+  const value1 = input1.value;
+
+  const calcular = precio * (value1 - 100)/100;
+  const resultP = document.getElementById("resultP"); 
+  resultP.innerText = `El precio con descuentos son $${calcular}`
+}
 
 function calcularPorcentaje() {
   const input = document.getElementById("precio1");
