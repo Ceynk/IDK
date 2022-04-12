@@ -1,15 +1,21 @@
-function calculaPorcentaje(precio) {
-  const input1 = document.getElementById("Porcentaje1")
-  const value1 = input1.value;
+//Como recorrer un array con For
+/*function calcularMedia(lista) {
+    let sumaLista = 0;
+    for (let i = 0; i < lista.length; i++) {
+        sumaLista = sumaLista + lista[i];
+    }
+    
+    const promedioLista = sumaLista / lista.length;
 
-  const calcular = precio * (value1 - 100)/100;
-  const resultP = document.getElementById("resultP"); 
-  resultP.innerText = `El precio con descuentos son $${calcular}`
-}
+    return promedioLista;
+} */
 
-function calcularPorcentaje() {
-  const input = document.getElementById("precio1");
-  const value = input.value;
-
-  const result = calculaPorcentaje(value);
-}
+function calcularMedia(lista) {
+    const sumaLista = lista.reduce(
+        function (valorAcomulado = 0, nuevoElemento) {
+            return valorAcomulado + nuevoElemento
+        }
+    );
+    const promedioLista = sumaLista / lista.length;
+    return promedioLista;
+} 

@@ -1,12 +1,4 @@
 body {
   font-family: Helvetica;
-  background-color: rgba(220, 220, 220, 0.842);
-}
-h1{
-  color: rgb(0, 0, 0);
-}  
-#precio{
-  font-size: 15px;
-  background-color: rgba(220, 220, 220, 0.842);;
-  border-color: red;
+  background-color:rgba(127, 255, 212, 0.829) ;
 }
