@@ -9,7 +9,6 @@
 
     return promedioLista;
 } */
-
 function calcularMedia(lista) {
     const sumaLista = lista.reduce(
         function (valorAcomulado = 0, nuevoElemento) {
