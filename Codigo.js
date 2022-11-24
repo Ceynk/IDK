@@ -1,72 +1,62 @@
-function miPerfil({nombre = "Alejandro", apellido, edadMayor = 16}) {
-  return `${nombre} ${apellido} Edad:${edadMayor}`;
+//Helpers
+function esPar(numerito) {
+    return (numerito % 2 === 0);
+};
+
+function calcularMedia(lista) {
+    const sumaLista = lista.reduce(
+        function (valorAcomulado = 0, nuevoElemento) {
+            return valorAcomulado + nuevoElemento
+        }
+    );
+    const promedioLista = sumaLista / lista.length;
+    return promedioLista;
 }
-console.log(miPerfil({apellido:"Diaz"}))
 
+// Calucladora de mediana
+function medianaSalarios(lista) {
+    const mitad = parseInt(lista.length / 2);
 
-function miCorreo(correo = "diazluisalejandro25@gmail.com", nombrePlazi = "Ceynk") {
-  return `Correo:${correo} Alias: ${nombrePlazi}`;
-}
+    if (esPar(lista.length)) {
+        const personitaMitad1 = lista[mitad - 1];
+        const personitaMitad2 = lista[mitad];
 
-function miDineroTotal(dinero = 100000, deudas = 85000, total = dinero - deudas) {
-  return `Dinero:${dinero} - Deudas:${deudas}  DineroTotal:${total}`;
-} 
-
-const tipoDeSuscripcion = "Expert";
-  
-  if(tipoDeSuscripcion == "Gratis"){
-    console.log("Solo puedes tomar los cursos gratis")
-  } 
-  else if(tipoDeSuscripcion == "Basic"){
-    console.log("Puedes tomar casi todos los cursos de Platzi durante un mes")
-  } 
-  else if(tipoDeSuscripcion == "Expert"){
-    console.log("Puedes tomar casi todos los cursos de Platzi durante un año")
-  } 
-  else if(tipoDeSuscripcion == "Expert Plus"){
-    console.log("Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año")
-  } 
-  else{
-    console.log("Pobre no tiene plazi")
-  } 
- 
-//
-
-i = 14;
-while (i >= 2) {
-	console.log("El valor de i es: " + i);
-	i--;
-}
-// 
-a = prompt("Cuanto es 2 + 2 ")
- if(a == 4){
-   alert("Estas en lo correcto");
- }
- else{
-   alert("eres realmente estupido")
- } 
- //  
- let lista = ["Como","Andamos","Gente"];
-  console.log(lista)
-  // 
-  const objetoPc = {
-    placaBase: "B450m",
-    tarjetaGrafica:"RTX 2060",
-    procesador:"R5 3600"
-  } 
-  
-  for (const property in objetoPc) {
-      console.log(`${property}: ${objetoPc[property]}`);
+        const mediana = calcularMedia([personitaMitad1, personitaMitad2])
+        return mediana;
+    } else {
+        const personitaMitad = lista[mitad];
+        return personitaMitad;
     }
-  // 
-  
-  function miArray(array ){
-    console.log(array.length) 
-    let i = array.length;
-    while (i >= 1) {
-      console.log(`El valor del array es ${array[i - 1]}`)
-      i--;
-     }
-  }
-  miArray(["Luis", "Alejandro", "Diaz"])  
-  
+}
+//Mediana General
+const salariosCol = colombia.map(
+    function (personita) {
+        return personita.salary;
+    }
+);
+
+const salariosColSorted = salariosCol.sort(
+    function (salaryA, salaryB) {
+        return salaryA - salaryB;
+    }
+);
+
+const medianaGeneralCol = medianaSalarios(salariosColSorted);
+
+// Mediana del Top 10%
+
+
+const spliceStart = (salariosColSorted.length * 90) / 100;
+const spliceCount = salariosColSorted.length - spliceStart;
+
+const salariosColTop10 = salariosColSorted.splice(
+    spliceStart,
+    spliceStart,
+);
+
+const medianaTop10Col = medianaSalarios(salariosColTop10);
+
+console.log(
+    medianaGeneralCol,
+    medianaTop10Col,
+); 
