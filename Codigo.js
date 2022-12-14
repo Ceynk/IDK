@@ -1,4 +1,4 @@
-x = 4;
-z = 5;
-y = x + z;
-console.log(y);
+x = 5;
+y = 6;
+z = x * y;
+console.log(z);
