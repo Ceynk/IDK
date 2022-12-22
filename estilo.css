@@ -1,6 +1,22 @@
 body {
   font-family: Helvetica;
 }
-h1{
+input{
+  border-radius: 6px;
+}
+button{
+  border-radius: 6px;
+  border-color: aqua;
+  opacity: 0.5;
+  }
+  button:hover{
+    background-color: aquamarine;
+  }
+  h1{
   color: red;
+}
+h2{
+  font-size: 21px;
+}
+Input:hover{
 }

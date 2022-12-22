@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link <link rel="stylesheet" type="text/css" href="estilo.css" />
-    <title>Primera Pagina</title>
-  </head>
-  <h1>Holas xd</h1>
-  
-  <body>
-    <script src="Codigo.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link  rel="stylesheet" type="text/css" href="estilo.css" />
+  <title>Calculadoras</title>
+</head>
+<body>
+  <header>
+    <h1>Calculadora</h1>
+  </header>
+  <section>
+    <h2>Calcula el area y perimetro de un cuadrado</h2>
+  </section>
+  <form>
+    <label for="BotonCuadrado">
+      Escribe cada lado de tu Cuadrado
+    </label>
+    <input type="number" id="InputCuadrado" placeholder="Coloca un numero" >
+    <button type="button" id ="perimetro" onclick="calcularPerimetroCuadrado()">
+      Calcular el perimetro
+    </button>
+    <button type="button" onclick="calcularAreaCuadrado()">
+      Calcular area
+    </button>
+    <br>
+    <br>
+    Escribe los datos del Triangulo
+    <input type="number" id="InputTriangulo">
+    <button type="button" onclick="calcularTriangulo()">
+      Calcular
+    </button>
+  </form>
+  <script src="Codigo.js"></script>
+</body>
 </html>
