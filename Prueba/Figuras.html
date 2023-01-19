@@ -5,12 +5,82 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="estilo.css" />
+    <link rel="stylesheet" type="text/css" href="estilo1.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
-    <title>Platzi</title>
+    <title>Calculadora</title>
 </head>
 
 <body>
+    <header>
+        <nav id="navbar" class="nav">
+            <ul class="nav-list">
+                <li>
+                    <a href="#welcome-section">Acerca </a>
+                </li>
+                <li>
+                    <a href="#projects">Proyectos</a>
+                </li>
+                <li>
+                    <a href="#contact">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <br>
+    <br>
+    <br>
+    <form>
+        <div id="cajaCuadrado">
+            <label for="BotonCuadrado">
+                <p style="color:black; padding: 12px; font-size: 20px;"> Cuadrado</p>
+                <input type="number" id="InputCuadrado" placeholder="Escribe los datos ">
+                <br>
+                <button type="button" class="project" onclick="calcularPerimetroCuadrado()">
+                    <span class="code">&lt;</span>
+                    Calcular el Perimetro
+                    <span class="code">&#47;&gt;</span>
+            </label>
+            </button>
+            <br>
+            <button type="button" class="project" onclick="calcularAreaCuadrado()">
+                <span class="code">&lt;</span>
+                Calcular el Area
+                <span class="code">&#47;&gt;</span>
+            </button>
+        </div>
 
+        <br>
+        <br>
+        <div id="cajaTriangulo">
+            <label for="BotonTriangulo">
+                <p style="color: black; padding: 12px; font-size: 20px;">Triangulo</p>
+                <div id="hola">
+                    <p style="color: black; ;">Lado A</p>
+                    <input type="number" id="lado1" placeholder="Escribe los datos">
+                    <br>
+                    <p style="color: black;">Lado B</p>
+                    <input type="number" id="lado2" placeholder="Escribe los datos">
+                    <br>
+                    <p style="color: black;">Base</p>
+                    <input type="number" id="base" placeholder="Escribe los datos">
+                    <br>
+                    <p style="color: black;">Altura</p>
+                    <input type="number" id="altura" placeholder="Escribe los datos">
+                </div>
+                <button type="button" class="project" onclick="calcularPerimetroTriangulo()">
+                    <span class="code">&lt;</span>
+                    Calcular el Perimetro
+                    <span class="code">&#47;&gt;</span>
+                </button>
+                <br>
+                <button type="button" class="project" onclick="calcularAreaTriangulo()">
+                    <span class="code">&lt;</span>
+                    Calcular el Diametro
+                    <span class="code">&#47;&gt;</span>
+                </button>
+            </label>
+        </div>
+    </form>
+    <script src="/Prueba/Codigo.js"></script>
 </body>
